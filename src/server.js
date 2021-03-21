@@ -25,10 +25,8 @@ app.use((err, req, res, next) => {
   });
 });
 
-// error handler middleware
-// app.use((error, req, res, next) => {
-//   console.error(error.stack);
-//   res.status(500).send('Something Broke!');
-// });
-
-app.listen(3333);
+app.listen(3333, () => {
+  console.log(
+    '⚡️ Servidor executando em localhost:3333! Aperte Ctrl+C, ou feche o terminal, para parar o servidor.',
+  );
+});
